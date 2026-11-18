@@ -1,64 +1,207 @@
 # ==============================================================================
 # BlockVote+ Git Ignore Configuration
+# Multi-stack: React (Vite/TS) + Spring Boot (Java 21/Maven) + FastAPI (InsightFace)
 # ==============================================================================
 
-# OS & Editor generated files
+# ------------------------------------------------------------------------------
+# 1. Operating System Files
+# ------------------------------------------------------------------------------
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
 Thumbs.db
-*.swp
-*.bak
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
 *~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ------------------------------------------------------------------------------
+# 2. IDE & Editor Files
+# ------------------------------------------------------------------------------
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+*.vsix
+
+# JetBrains IntelliJ IDEA
 .idea/
 *.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
 .project
 .classpath
 .settings/
+.factorypath
+bin/
+.metadata/
+
+# Generic Editor temp files
+*.swp
+*.swo
+*.bak
+*~
 
 # ------------------------------------------------------------------------------
-# Frontend (React / Vite / Node.js)
+# 3. Frontend (React / Vite / TypeScript / Node.js)
 # ------------------------------------------------------------------------------
-frontend/node_modules/
 node_modules/
+*/node_modules/
+frontend/node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+
+# Vite & build output
+dist/
+dist-ssr/
 frontend/dist/
 frontend/dist-ssr/
+.vite/
+frontend/.vite/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Test & coverage
+coverage/
+.nyc_output/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment local overrides
+.env.local
+.env.*.local
 frontend/.env.local
 frontend/.env.*.local
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
-frontend/.pnpm-debug.log*
 
 # ------------------------------------------------------------------------------
-# Backend (Spring Boot / Maven / Java)
+# 4. Backend (Spring Boot / Maven / Java 21)
 # ------------------------------------------------------------------------------
-backend/target/
 target/
+*/target/
+backend/target/
+
+# Compiled Java class files & packages
 *.class
 *.jar
 *.war
 *.ear
+*.nar
+
+# Maven wrapper jar (if not checking in)
+.mvn/wrapper/maven-wrapper.jar
 backend/.mvn/wrapper/maven-wrapper.jar
 
+# JVM crash logs
+hs_err_pid*
+replay_pid*
+
+# Accidental npm artifacts in backend
+backend/package-lock.json
+
 # ------------------------------------------------------------------------------
-# AI Biometric Service (Python / FastAPI / Uvicorn)
+# 5. AI Biometric Service (Python 3.10+ / FastAPI / Uvicorn)
 # ------------------------------------------------------------------------------
-ai-service/__pycache__/
+# Byte-compiled / optimized / DLL files
+__pycache__/
 **/__pycache__/
+ai-service/__pycache__/
 *.py[cod]
 *$py.class
 *.so
+
+# C extensions
+*.c
+*.so
+
+# Distribution / packaging
 .Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
 env/
 venv/
 .venv/
 ENV/
+env.bak/
+venv.bak/
+ai-service/env/
+ai-service/venv/
+ai-service/.venv/
+
+# InsightFace / ONNX model weights and downloads (buffalo_s)
+*.onnx
+*.weights
+*.pt
+*.pth
+*.bin
+models/
+ai-service/models/
+.insightface/
 ai-service/.insightface/
-models/buffalo_s/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
 
 # ------------------------------------------------------------------------------
-# Logs & Databases
+# 6. Database, Logs & Secrets
 # ------------------------------------------------------------------------------
 *.log
 logs/
 *.pid
+*.seed
+*.pid.lock
+
+# Local MongoDB data directories
 data/
+mongodata/
+*.dump
+
+# Secrets & local credentials
+*.pem
+*.key
+*.p12
+*.jks
+.env
