@@ -1,0 +1,64 @@
+# ==============================================================================
+# BlockVote+ Git Ignore Configuration
+# ==============================================================================
+
+# OS & Editor generated files
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*~
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# ------------------------------------------------------------------------------
+# Frontend (React / Vite / Node.js)
+# ------------------------------------------------------------------------------
+frontend/node_modules/
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
+
+# ------------------------------------------------------------------------------
+# Backend (Spring Boot / Maven / Java)
+# ------------------------------------------------------------------------------
+backend/target/
+target/
+*.class
+*.jar
+*.war
+*.ear
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# ------------------------------------------------------------------------------
+# AI Biometric Service (Python / FastAPI / Uvicorn)
+# ------------------------------------------------------------------------------
+ai-service/__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+ai-service/.insightface/
+models/buffalo_s/
+
+# ------------------------------------------------------------------------------
+# Logs & Databases
+# ------------------------------------------------------------------------------
+*.log
+logs/
+*.pid
+data/

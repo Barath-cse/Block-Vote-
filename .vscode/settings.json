@@ -1,0 +1,5 @@
+{
+  "spring-boot.ls.validation.version-validation": "OFF",
+  "spring-boot.ls.problem.version-validation.BOOT_VERSION_VALIDATION_CODE": "IGNORE",
+  "java.configuration.updateBuildConfiguration": "automatic"
+}

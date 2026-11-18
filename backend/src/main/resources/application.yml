@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: voting-backend
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/voting_system
+      auto-index-creation: true
+
+ai-service:
+  url: http://localhost:8000
+  extract-embedding-path: /extract-embedding
+
+biometric:
+  similarity-threshold: 0.45
+
+logging:
+  level:
+    root: INFO
+    com.voting: DEBUG
